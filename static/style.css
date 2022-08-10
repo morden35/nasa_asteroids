@@ -3,3 +3,22 @@ body {
 	background-color: black;
     color: white
 }
+
+li {
+	list-style-type: none;
+}
+
+.col_left {
+	float: left;
+	width: 50%;
+}
+
+.col_right {
+	float: right;
+	width: 50%;
+	text-align: left;
+}
+
+hr {
+	width: 100%;
+}
