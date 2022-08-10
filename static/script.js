@@ -109,7 +109,7 @@ class NASA extends React.Component {
             <div>
                 <h1>NASA Near Earth Object Monitor</h1>
                 <div>
-                    <h3>Enter a date:</h3>
+                    <h3 id="enter_date">Enter a date:</h3>
                     <input id="date" type="date"></input>
                     <button onClick={() => this.get_objects()}>Find Asteroids!</button>
                 </div>

@@ -1,7 +1,15 @@
 body {
 	text-align: center;
-	background-color: black;
-    color: white
+	background-image: url('star_nova.png');
+	color: white
+}
+
+#enter_date {
+	color: rgb(176, 78, 176)
+}
+
+h2 {
+	color: rgb(57, 255, 47)
 }
 
 li {
