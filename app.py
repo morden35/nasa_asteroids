@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import json
 import requests
+import datetime
 
 app = Flask(__name__)
 
@@ -12,8 +13,12 @@ def index():
 @app.route('/api/get_objects', methods=['POST'])
 def get_objects():
     date = json.loads(request.data)['date']
+    
+    # default to today's date
     if date == '':
-        return jsonify({'success': False})
+        date = str(datetime.date.today())
+        # print(date)
+    
     # print(date)
     # format date 2022-08-01
 
@@ -25,4 +30,7 @@ def get_objects():
     objects = r.json()['near_earth_objects'][date]
     # print(objects)
 
-    return jsonify({'success': True, 'objects': objects})
+    return jsonify({'success': True,
+                    'objects': objects,
+                    'date': datetime.datetime.strptime(date, '%Y-%m-%d').strftime('%m/%d/%Y')
+                    })

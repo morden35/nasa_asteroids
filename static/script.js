@@ -8,7 +8,8 @@ class NASA extends React.Component {
 
     get_objects() {
         let date = document.querySelector("input#date").value;
-        console.log(date);
+        // this.state.date = date
+        // console.log(date);
 
         let request = fetch("http://127.0.0.1:5000/api/get_objects",
                             {method: 'POST',
@@ -17,15 +18,25 @@ class NASA extends React.Component {
         .then(data => {
             if (data['success']) {
                 let asteroids = data['objects'];
-                // console.log(asteroids)
+
                 // first, remove all old asteroids from html
                 let asteroid_ul = document.getElementById("asteroid_list");
                 while (asteroid_ul.firstChild) {
                     asteroid_ul.removeChild(asteroid_ul.firstChild);
                 }
+
+                let asteroid_div = document.getElementById("asteroid_div");
+                if (asteroid_div.childNodes.length > 1) {
+                    asteroid_div.removeChild(asteroid_div.firstChild);
+                }
+                let title_text = document.createElement("h2");
+                // console.log(date);
+                title_text.textContent = "Near earth objects for " + data['date'];
+                asteroid_div.insertBefore(title_text, asteroid_ul);
+
                 // re-populate page with 'new' asteroids
                 for (let asteroid of asteroids) {
-                    console.log(asteroid)
+                    // console.log(asteroid)
                     // create outer list item
                     let a_li = document.createElement("li");
                     
@@ -102,7 +113,7 @@ class NASA extends React.Component {
                     <input id="date" type="date"></input>
                     <button onClick={() => this.get_objects()}>Find Asteroids!</button>
                 </div>
-                <div>
+                <div id="asteroid_div">
                     <ul id="asteroid_list">
                     </ul>
                 </div>
