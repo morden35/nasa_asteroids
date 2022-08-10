@@ -8,8 +8,6 @@ class NASA extends React.Component {
 
     get_objects() {
         let date = document.querySelector("input#date").value;
-        // this.state.date = date
-        // console.log(date);
 
         let request = fetch("http://127.0.0.1:5000/api/get_objects",
                             {method: 'POST',
@@ -30,13 +28,11 @@ class NASA extends React.Component {
                     asteroid_div.removeChild(asteroid_div.firstChild);
                 }
                 let title_text = document.createElement("h2");
-                // console.log(date);
                 title_text.textContent = "Near earth objects for " + data['date'];
                 asteroid_div.insertBefore(title_text, asteroid_ul);
 
                 // re-populate page with 'new' asteroids
                 for (let asteroid of asteroids) {
-                    // console.log(asteroid)
                     // create outer list item
                     let a_li = document.createElement("li");
                     
@@ -94,7 +90,7 @@ class NASA extends React.Component {
                     a_li.appendChild(a_div_2)
                     a_li.appendChild(a_hr)
 
-                    // appemd list item to list
+                    // append list item to list
                     asteroid_ul.appendChild(a_li);
                 }
             }
