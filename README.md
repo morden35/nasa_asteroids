@@ -19,6 +19,12 @@ $ pip install Flask
 $ pip install jsonify  
 $ pip install requests  
 
+Once everything is installed, run the following from the command line  
+$ flask run  
+
+The application should not run locally via:  
+http://127.0.0.1:5000/
+
 ## Thought Process / Decisions
 
 ## Future Improvements
