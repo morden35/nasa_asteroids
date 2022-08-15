@@ -30,12 +30,13 @@ http://127.0.0.1:5000/
 ## Future Improvements
 
 ## Sources
-https://www.w3schools.com/jsref/dom_obj_date.asp
-https://www.w3schools.com/howto/howto_css_two_columns.asp
-https://bobbyhadz.com/blog/javascript-create-element-with-class
-https://www.w3schools.com/cssref/pr_text_text-align.ASP
-https://docs.python.org/3/library/datetime.html
+https://reactjs.org/docs/getting-started.html  
+https://www.w3schools.com/jsref/dom_obj_date.asp  
+https://www.w3schools.com/howto/howto_css_two_columns.asp  
+https://bobbyhadz.com/blog/javascript-create-element-with-class  
+https://www.w3schools.com/cssref/pr_text_text-align.ASP  
+https://docs.python.org/3/library/datetime.html  
 
 Image:  
-https://www.nasa.gov/sites/default/files/star_nova.png
-https://www.nasa.gov/topics/solarsystem/features/watchtheskies/skies_gallery.html#lowerAccordion-set1-slide6
+https://www.nasa.gov/sites/default/files/star_nova.png  
+https://www.nasa.gov/topics/solarsystem/features/watchtheskies/skies_gallery.html#lowerAccordion-set1-slide6  

@@ -12,12 +12,14 @@ def index():
 
 @app.route('/api/get_objects', methods=['POST'])
 def get_objects():
+    # load date from user input
     date = json.loads(request.data)['date']
     
     # default to today's date
     if date == '':
         date = str(datetime.date.today())
 
+    # make api call
     api_key = '2zcSAHeiiktxliyCHz2eVVzGfUpwPsFqTX97WquF'
     url = f"https://api.nasa.gov/neo/rest/v1/feed?start_date={date}&end_date={date}&api_key={api_key}"
     r = requests.get(url)

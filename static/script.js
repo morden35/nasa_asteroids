@@ -9,6 +9,7 @@ class NASA extends React.Component {
     get_objects() {
         let date = document.querySelector("input#date").value;
 
+        // make api call, passing user supplied date
         let request = fetch("http://127.0.0.1:5000/api/get_objects",
                             {method: 'POST',
                              body: JSON.stringify({'date': date})});
@@ -27,6 +28,7 @@ class NASA extends React.Component {
                 if (asteroid_div.childNodes.length > 1) {
                     asteroid_div.removeChild(asteroid_div.firstChild);
                 }
+
                 let title_text = document.createElement("h2");
                 title_text.textContent = "Near earth objects for " + data['date'];
                 asteroid_div.insertBefore(title_text, asteroid_ul);
