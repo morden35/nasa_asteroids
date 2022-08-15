@@ -50,6 +50,9 @@ The UI currently displays the name, estimated diameter min/max in feet, miss dis
 ### 7. Push state to history for use of back button
 Since this is a Single Page Application (SPA), the page does not actually re-load when a user clicks the 'Find Asteroids!' button. When using a SPA, we want to allow the user to click the back button to re-visit 'previous pages'. To enable this, we could push state to the history and navigation bar.
 
+### 8. Default Date
+At the moment I am handling setting the default date to today's date in the app.py get_objects route. An alternative to this would be to add a default date to the input React element.
+
 ## Sources
 https://reactjs.org/docs/getting-started.html  
 https://www.w3schools.com/jsref/dom_obj_date.asp  
