@@ -13,7 +13,8 @@ class NASA extends React.Component {
                 <div>
                     <h3 id="enter_date">Enter a date:</h3>
                     <input id="date" type="date"></input>
-                    <button onClick={() => this.get_objects()}>Find Asteroids!</button>
+                    <button onClick={() => this.get_objects()}>Find Asteroids!
+                    </button>
                 </div>
                 <div id="asteroid_div">
                     <ul id="asteroid_list">
@@ -47,7 +48,8 @@ class NASA extends React.Component {
                 }
 
                 let title_text = document.createElement("h2");
-                title_text.textContent = "Asteroids near earth on " + data['date'];
+                title_text.textContent = "Asteroids near earth on " + 
+                                         data['date'];
                 asteroid_div.insertBefore(title_text, asteroid_ul);
 
                 // re-populate page with 'new' asteroids
@@ -86,13 +88,23 @@ class NASA extends React.Component {
                     let a_h3_6 = document.createElement("h3");
                     a_h3_6.textContent = asteroid['name'];
                     let a_h3_7 = document.createElement("h3");
-                    a_h3_7.textContent = asteroid['estimated_diameter']['feet']['estimated_diameter_min'] + " - " + asteroid['estimated_diameter']['feet']['estimated_diameter_max'];
+                    a_h3_7.textContent = asteroid.estimated_diameter
+                                                 .feet
+                                                 .estimated_diameter_min +
+                                         " - " +
+                                         asteroid.estimated_diameter
+                                                 .feet
+                                                 .estimated_diameter_max;
                     let a_h3_8 = document.createElement("h3");
-                    a_h3_8.textContent = asteroid['close_approach_data'][0]['miss_distance']['miles'];
+                    a_h3_8.textContent = asteroid.close_approach_data[0]
+                                                 .miss_distance.miles;
                     let a_h3_9 = document.createElement("h3");
-                    a_h3_9.textContent = asteroid['close_approach_data'][0]['relative_velocity']['miles_per_hour'];
+                    a_h3_9.textContent = asteroid.close_approach_data[0]
+                                                 .relative_velocity
+                                                 .miles_per_hour;
                     let a_h3_10 = document.createElement("h3");
-                    a_h3_10.textContent = asteroid['is_potentially_hazardous_asteroid'];
+                    a_h3_10.textContent = asteroid
+                                            .is_potentially_hazardous_asteroid;
 
                     // append text to right column
                     a_div_2.appendChild(a_h3_6);
