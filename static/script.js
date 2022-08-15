@@ -1,9 +1,26 @@
 class NASA extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            date: null,
-        }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         date: null,
+    //     }
+    // }
+
+    render() {
+        return (
+            <div>
+                <h1>NASA Near Earth Object Monitor</h1>
+                <div>
+                    <h3 id="enter_date">Enter a date:</h3>
+                    <input id="date" type="date"></input>
+                    <button onClick={() => this.get_objects()}>Find Asteroids!</button>
+                </div>
+                <div id="asteroid_div">
+                    <ul id="asteroid_list">
+                    </ul>
+                </div>
+            </div>
+        );
     }
 
     get_objects() {
@@ -30,7 +47,7 @@ class NASA extends React.Component {
                 }
 
                 let title_text = document.createElement("h2");
-                title_text.textContent = "Near earth objects for " + data['date'];
+                title_text.textContent = "Asteroids near earth on " + data['date'];
                 asteroid_div.insertBefore(title_text, asteroid_ul);
 
                 // re-populate page with 'new' asteroids
@@ -100,23 +117,6 @@ class NASA extends React.Component {
                 console.log("Please enter a valid date.");
             }
         })
-    }
-
-    render() {
-        return (
-            <div>
-                <h1>NASA Near Earth Object Monitor</h1>
-                <div>
-                    <h3 id="enter_date">Enter a date:</h3>
-                    <input id="date" type="date"></input>
-                    <button onClick={() => this.get_objects()}>Find Asteroids!</button>
-                </div>
-                <div id="asteroid_div">
-                    <ul id="asteroid_list">
-                    </ul>
-                </div>
-            </div>
-        );
     }
 }
 
