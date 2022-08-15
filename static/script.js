@@ -54,7 +54,7 @@ class NASA extends React.Component {
                 for (let asteroid of asteroids) {
                     // create outer list item
                     let a_li = document.createElement("li");
-                    
+
                     // create left column
                     let a_div_1 = document.createElement("div");
                     a_div_1.classList.add("col_left");
@@ -72,11 +72,11 @@ class NASA extends React.Component {
                     a_h3_5.textContent = "Hazardous:";
 
                     // append titles to left column
-                    a_div_1.appendChild(a_h3_1)
-                    a_div_1.appendChild(a_h3_2)
-                    a_div_1.appendChild(a_h3_3)
-                    a_div_1.appendChild(a_h3_4)
-                    a_div_1.appendChild(a_h3_5)
+                    a_div_1.appendChild(a_h3_1);
+                    a_div_1.appendChild(a_h3_2);
+                    a_div_1.appendChild(a_h3_3);
+                    a_div_1.appendChild(a_h3_4);
+                    a_div_1.appendChild(a_h3_5);
 
                     // create right column
                     let a_div_2 = document.createElement("div");
@@ -93,21 +93,21 @@ class NASA extends React.Component {
                     a_h3_9.textContent = asteroid['close_approach_data'][0]['relative_velocity']['miles_per_hour'];
                     let a_h3_10 = document.createElement("h3");
                     a_h3_10.textContent = asteroid['is_potentially_hazardous_asteroid'];
-                    
+
                     // append text to right column
-                    a_div_2.appendChild(a_h3_6)
-                    a_div_2.appendChild(a_h3_7)
-                    a_div_2.appendChild(a_h3_8)
-                    a_div_2.appendChild(a_h3_9)
-                    a_div_2.appendChild(a_h3_10)
+                    a_div_2.appendChild(a_h3_6);
+                    a_div_2.appendChild(a_h3_7);
+                    a_div_2.appendChild(a_h3_8);
+                    a_div_2.appendChild(a_h3_9);
+                    a_div_2.appendChild(a_h3_10);
 
                     // create horizontal line
                     let a_hr = document.createElement("hr");
-                    
+
                     // append columns and line to list item
-                    a_li.appendChild(a_div_1)
-                    a_li.appendChild(a_div_2)
-                    a_li.appendChild(a_hr)
+                    a_li.appendChild(a_div_1);
+                    a_li.appendChild(a_div_2);
+                    a_li.appendChild(a_hr);
 
                     // append list item to list
                     asteroid_ul.appendChild(a_li);
@@ -123,6 +123,6 @@ class NASA extends React.Component {
 /* --------------------------------- */
 
 ReactDOM.render(
-	<NASA/>,
-	document.getElementById('root')
+    <NASA/>,
+    document.getElementById('root')
   );

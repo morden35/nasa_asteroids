@@ -1,32 +1,32 @@
 body {
-	text-align: center;
-	background-image: url('star_nova.png');
-	color: white
+    text-align: center;
+    background-image: url('star_nova.png');
+    color: white
 }
 
 #enter_date {
-	color: rgb(176, 78, 176)
+    color: rgb(176, 78, 176)
 }
 
 h2 {
-	color: rgb(57, 255, 47)
+    color: rgb(57, 255, 47)
 }
 
 li {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 .col_left {
-	float: left;
-	width: 50%;
+    float: left;
+    width: 50%;
 }
 
 .col_right {
-	float: right;
-	width: 50%;
-	text-align: left;
+    float: right;
+    width: 50%;
+    text-align: left;
 }
 
 hr {
-	width: 100%;
+    width: 100%;
 }

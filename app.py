@@ -14,7 +14,7 @@ def index():
 def get_objects():
     # load date from user input
     date = json.loads(request.data)['date']
-    
+
     # default to today's date
     if date == '':
         date = str(datetime.date.today())
