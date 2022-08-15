@@ -14,15 +14,15 @@ Useful Python installation guides:
 https://www.python.org/downloads/macos/  
 https://docs.python-guide.org/starting/install3/osx/  
 
-To install, run the following from the command line  
-$ pip install Flask  
-$ pip install jsonify  
-$ pip install requests  
+To install, run the following from the command line:  
+$ pip3 install Flask  
+$ pip3 install jsonify  
+$ pip3 install requests  
 
-Once everything is installed, run the following from the command line  
+Once everything is installed, run the following from the command line:  
 $ flask run  
 
-The application should not run locally via:  
+The application should now run locally via:  
 http://127.0.0.1:5000/
 
 ## Thought Process / Decisions
