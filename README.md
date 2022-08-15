@@ -15,9 +15,9 @@ https://www.python.org/downloads/macos/
 https://docs.python-guide.org/starting/install3/osx/  
 
 To install, run the following from the command line  
-/$ pip install Flask  
-/$ pip install jsonify  
-/$ pip install requests  
+$ pip install Flask  
+$ pip install jsonify  
+$ pip install requests  
 
 ## Thought Process / Decisions
 
