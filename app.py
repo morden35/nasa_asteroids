@@ -25,19 +25,6 @@ def get_objects():
     r = requests.get(url)
     objects = r.json()['near_earth_objects'][date]
 
-    # print(objects[0])
-    # round decimals
-    # for object in objects:
-        # object['estimated_diameter']['feet']['estimated_diameter_min'] = "{:,}".format(round(object['estimated_diameter']['feet']['estimated_diameter_min'],
-        #                                                                                ndigits=2))
-        # object['estimated_diameter']['feet']['estimated_diameter_max'] = "{:,}".format(round(object['estimated_diameter']['feet']['estimated_diameter_max'],
-        #                                                                                ndigits=2))
-        # object['close_approach_data'][0]['miss_distance']['miles'] = "{:,}".format(round(float(object['close_approach_data'][0]['miss_distance']['miles']),
-        #                                                                            ndigits=2))
-        # object['close_approach_data'][0]['relative_velocity']['miles_per_hour'] = "{:,}".format(round(float(object['close_approach_data'][0]['relative_velocity']['miles_per_hour']),
-        #                                                                                         ndigits=2))
-        # object['is_potentially_hazardous_asteroid'] = str(object['is_potentially_hazardous_asteroid']).capitalize()
-
     return jsonify({'success': True,
                     'objects': objects,
                     'date': datetime.datetime.strptime(date, '%Y-%m-%d').strftime('%m/%d/%Y')

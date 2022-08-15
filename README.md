@@ -23,9 +23,7 @@ Once everything is installed, run the following from the command line:
 $ flask run  
 
 The application should now run locally via:  
-http://127.0.0.1:5000/
-
-## Thought Process / Decisions
+http://127.0.0.1:5000/  
 
 ## Future Improvements
 
@@ -46,10 +44,11 @@ At the moment, the API Key is public and explicitly written in app.py. This is m
 5. Simplify JavaScript
 The get_objects method in script.js currently loops over the asteroids returned from the Flask api and creates roughly 15 React elements for each asteroid which are then appended to the previously rendered React elements. This approach works, however the code might be difficult to read for future engineers. There might be a cleaner way to write this code. Perhaps I could have abstracted the for loop into a separate method. Rather than using the document.createElement syntax, I could have used JSX which may have been more visually appealing.
 
-6. Format numbers for readability
+6. Formatting Output numbers for readability
+The UI currently displays the name, estimated diameter min/max in feet, miss distance in miles, relative velocity in mph, and hazardous boolean value for each asteroid in the format that is returned by the NASA API. I would change some of this formatting for readability by rounding all floating point values to two decimal places and adding commas to all floating point values. I would also capitalize the boolean value and strip the parenthesis from the asteroid name. Such changes could be made in either app.py or script.js. I would choose to make the changes in script.js as to avoid an additional for loop.
 
 7. Push state to history for use of back button
-
+Since this is a Single Page Application (SPA), the page does not actually re-load when a user clicks the 'Find Asteroids!' button. When using a SPA, we want to allow the user to click the back button to re-visit 'previous pages'. To enable this, we could push state to the history and navigation bar.
 
 ## Sources
 https://reactjs.org/docs/getting-started.html  
