@@ -32,7 +32,8 @@ At the moment, the get_objects route in app.py returns a json object assuming th
 
 ### 2. Use State to keep track of date  
 script.js contains the React components, JavaScript, and elements. Currently, the NASA class simply renders React elements. If a user clicks the 'Find Asteroids!' button, the get_objects method is called. get_objects selects the date that the user inputs, fetches data from the flask api, and builds more React elements that are appended to the previously rendered React elements.  
-If we wanted to make this application more complex in the future, and potentially do more things based on user input, we could initialize this.state with an object including a date in the NASA class. This would allow us to create a more complex application, take advantage of React Lifecycle Methods, handle different events, and add conditional rendering.
+
+If we wanted to make this application more complex in the future, and potentially do more things based on user input, we could initialize this.state with an object including a date (and any other items we want to keep track of) in the NASA class. This would allow us to create a more complex application, take advantage of React Lifecycle Methods, handle different events, and add conditional rendering.
 
 ### 3. Set up virtual environment
 Setting up a virtual environment would be a nice way to ensure that the installation of necessary libraries is smooth and easy for all users. This would be a nice touch to add for future use, especially if various people are expected to run this application locally.
